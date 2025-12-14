@@ -188,3 +188,13 @@ body {
 .card:active {
   transform: scale(0.98);
 }
+
+@media (max-width: 576px) {
+  .winter-card {
+    padding: 2.5rem 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+}
