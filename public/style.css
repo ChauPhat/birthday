@@ -1,1 +1,190 @@
-/* Không cần style.css vì đã sử dụng Bootstrap */
+/* ================= GLOBAL ================= */
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background : linear-gradient(180deg, #f7faff, #ffffff);
+  color      : #1f2937;
+}
+
+/* ================= HERO ================= */
+.winter-hero {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.45), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.35), transparent 45%),
+    linear-gradient(135deg, #e9edff, #f4efff);
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  position       : relative;
+  overflow       : hidden;
+}
+
+/* ================= GLASS CARD ================= */
+.winter-card {
+  background     : rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(22px);
+  border-radius  : 36px;
+  padding        : 3.8rem 3.5rem;
+  max-width      : 720px;
+  box-shadow     :
+    0 30px 80px rgba(91, 108, 255, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  animation: heroIn 1.2s ease forwards;
+  transform: translateY(20px) scale(0.96);
+  opacity  : 0;
+}
+
+@keyframes heroIn {
+  to {
+    transform: translateY(0) scale(1);
+    opacity  : 1;
+  }
+}
+
+/* ================= TEXT ================= */
+.hero-title {
+  font-family   : "Playfair Display", serif;
+  font-size     : 3rem;
+  font-weight   : 700;
+  letter-spacing: -0.02em;
+  color         : #1f2937;
+  text-shadow   : 0 6px 30px rgba(255, 255, 255, 0.45);
+}
+
+.hero-subtitle {
+  font-size : 1.1rem;
+  color     : #4b5563;
+  margin-top: 1rem;
+  animation : fadeUp 1.4s ease forwards;
+  opacity   : 0;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity  : 1;
+    transform: translateY(0);
+  }
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+/* ================= PROGRESS ================= */
+.progress {
+  border-radius: 999px;
+  overflow     : hidden;
+  background   : #e5e7eb;
+}
+
+.progress-bar {
+  transition: width 0.4s ease;
+  background: linear-gradient(90deg, #5b6cff, #8b5cf6);
+}
+
+/* ================= CARDS ================= */
+.card {
+  border       : none;
+  border-radius: 26px;
+  background   : #ffffff;
+  transition   : all 0.25s ease;
+}
+
+.card:hover {
+  transform : translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Selected card */
+.card:has(.form-check-input:checked) {
+  background: linear-gradient(135deg, #f3f5ff, #faf7ff);
+  border    : 2px solid #c7d2fe;
+  box-shadow: 0 18px 45px rgba(165, 180, 252, 0.35);
+}
+
+/* ================= FORM ================= */
+.form-check-input {
+  width : 1.3rem;
+  height: 1.3rem;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #5b6cff;
+  border-color    : #5b6cff;
+}
+
+.form-control {
+  border-radius: 16px;
+  border       : 1px solid #e5e7eb;
+}
+
+.form-control:focus {
+  border-color: #8b5cf6;
+  box-shadow  : 0 0 0 3px rgba(139, 92, 246, 0.25);
+}
+
+/* ================= BUTTON ================= */
+.btn-winter {
+  background   : linear-gradient(135deg, #5b6cff, #8b5cf6);
+  color        : white;
+  border       : none;
+  border-radius: 999px;
+  padding      : 14px 52px;
+  font-weight  : 600;
+}
+
+.btn-winter:hover {
+  transform : translateY(-2px);
+  box-shadow: 0 12px 32px rgba(91, 108, 255, 0.45);
+}
+
+/* CTA pulse */
+#next-button {
+  animation: pulseSoft 2.5s ease-in-out infinite;
+}
+
+@keyframes pulseSoft {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 32px rgba(255, 255, 255, 0.45);
+  }
+}
+
+/* ================= SNOW ================= */
+.snowflake {
+  position      : fixed;
+  top           : -10px;
+  color         : white;
+  font-size     : 1rem;
+  opacity       : 0.6;
+  animation     : fall linear infinite;
+  pointer-events: none;
+  z-index       : 9999;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+
+.card {
+  cursor: pointer;
+}
+
+.card input,
+.card label {
+  cursor: default;
+}
+
+.card:active {
+  transform: scale(0.98);
+}
