@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const message = `🎂 Checklist quà sinh nhật\n\n${selectedGifts.join('\n')}`;
 
-    fetch('https://formspree.io/f/mldqvewq', { // 👈 THAY FORM ID
+    fetch('https://formspree.io/f/xanrknyl', { // 👈 THAY FORM ID
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message })
