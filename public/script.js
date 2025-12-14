@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const giftList = [
-    "Lược", "Gương", "Bông tẩy trang", "Tẩy trang", "Sữa rửa mặt", "Toner", "Serum",
+    "Lược", "Gương", "Tẩy trang", "Sữa rửa mặt", "Toner", "Serum",
     "Kem chống nắng (mặt)", "Mặt nạ", "Tẩy tế bào chết", "Kem mắt", "Xịt khoáng",
     "Kem nền / Cushion", "Kem che khuyết điểm", "Phấn phủ / phấn nén", "Má hồng",
     "Tạo khối / Highlight", "Chì kẻ mày", "Mascara", "Eyeliner", "Phấn mắt", "Son môi",
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "Xịt dưỡng tóc", "Máy sấy", "Máy uốn / duỗi", "Kẹp tóc", "Dây buộc tóc",
     "Sữa tắm", "Tẩy tế bào chết body", "Sữa dưỡng thể", "Kem chống nắng body",
     "Nước hoa", "Lăn / xịt khử mùi", "Kem dưỡng tay – chân", "Ví tiền", "Son môi",
-    "Kẹp tóc", "Túi xách", "Giày dép", "Nhẫn", "Vòng tay", "Dây chuyền", "Bông tai", "Kính mát"
+    "Kẹp tóc", "Túi xách", "Giày dép", "Nhẫn", "Vòng tay", "Dây chuyền", "Bông tai", "Kính mát","Khác"
   ];
 
   // Lấy dữ liệu đã lưu
